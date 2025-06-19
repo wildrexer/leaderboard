@@ -1,5 +1,5 @@
 const users = [
-  { username: "Marshmello", wagered: 900 },
+  { username: "Marshmello", wagered: 900 },  logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
   { username: "2", wagered: 500 },
   { username: "3", wagered: 150 },
   { username: "4", wagered: 75 },
