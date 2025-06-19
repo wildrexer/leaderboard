@@ -1,75 +1,54 @@
 const users = [
-  {
-    username: "Marshmello",
-    wagered: 900,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  {
-    username: "2",
-    wagered: 500,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  {
-    username: "3",
-    wagered: 150,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  {
-    username: "4",
-    wagered: 75,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  {
-    username: "5",
-    wagered: 25,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  {
-    username: "6",
-    wagered: 0,
-    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
-  },
-  { username: "7", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
-  { username: "8", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
-  { username: "9", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
-  { username: "10", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" }
+  { username: "Marshmello", wagered: 900, logo: "logo.png" },
+  { username: "User2", wagered: 500, logo: "logo.png" },
+  { username: "User3", wagered: 150, logo: "logo.png" },
+  { username: "User4", wagered: 75, logo: "logo.png" },
+  { username: "User5", wagered: 25, logo: "logo.png" },
+  { username: "User6", wagered: 0, logo: "logo.png" },
+  { username: "User7", wagered: 0, logo: "logo.png" },
+  { username: "User8", wagered: 0, logo: "logo.png" },
+  { username: "User9", wagered: 0, logo: "logo.png" },
+  { username: "User10", wagered: 0, logo: "logo.png" }
 ];
 
-function renderLeaderboard() {
-  const topContainer = document.getElementById("top3");
-  const rowsContainer = document.getElementById("remaining");
+users.sort((a, b) => b.wagered - a.wagered);
 
-  topContainer.innerHTML = "";
-  rowsContainer.innerHTML = "";
+function renderTop3() {
+  const topThreeContainer = document.getElementById("top-three");
+  const topThree = users.slice(0, 3);
 
-  users.forEach((user, index) => {
-    if (index < 3) {
-      // Top 3 cards
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <div class="rank">#${index + 1}</div>
-        <img src="${user.avatar}" alt="avatar" />
-        <h3>${user.username || "—"}</h3>
-        <div>Wagered:</div>
-        <div class="amount">$${user.wagered}</div>
-      `;
-      topContainer.appendChild(card);
-    } else {
-      // Normal rows
-      const row = document.createElement("div");
-      row.className = "row";
-      row.innerHTML = `
-        <div class="rank">#${index + 1}</div>
-        <div class="name">
-          <img src="${user.avatar}" alt="avatar" />
-          ${user.username || "—"}
-        </div>
-        <div class="amount">$${user.wagered}</div>
-      `;
-      rowsContainer.appendChild(row);
-    }
+  topThree.forEach((user, index) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <div class="rank">#${index + 1}</div>
+      <img src="${user.logo}" alt="logo" />
+      <h2>${user.username}</h2>
+      <div>Wagered:</div>
+      <div class="amount">$${user.wagered}</div>
+    `;
+    topThreeContainer.appendChild(div);
   });
 }
 
-window.addEventListener("load", renderLeaderboard);
+function renderOthers() {
+  const othersContainer = document.getElementById("rank-list");
+  const others = users.slice(3, 10);
+
+  others.forEach((user, index) => {
+    const row = document.createElement("div");
+    row.className = "rank-row";
+    row.innerHTML = `
+      <div class="rank">#${index + 4}</div>
+      <div class="username">
+        <img src="${user.logo}" alt="logo" />
+        ${user.username}
+      </div>
+      <div class="amount">$${user.wagered}</div>
+    `;
+    othersContainer.appendChild(row);
+  });
+}
+
+renderTop3();
+renderOthers();
