@@ -167,3 +167,11 @@ body {
       0 0 40px #ffea00;
   }
 }
+.rank-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  box-shadow: 0 0 5px #fff, 0 0 10px gold;
+}
