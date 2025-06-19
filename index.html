@@ -5,36 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header with logo -->
-  <header class="site-header">
-    <img src="https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" alt="Site Logo" class="site-logo" />
-    <span class="site-title">Leaderboard</span>
+  <header>
+    <h1><span class="highlight">$1000</span> CODE Rexer WEEKLY LEADERBOARD!</h1>
+    <p>Every <strong>BET</strong> on BETY under Code <strong>MAMA</strong> counts towards your score.<br>
+    The leaderboard updates every day.</p>
+    <div class="buttons">
+      <a href="#" class="btn">▶ PLAY NOW</a>
+      <a href="#" class="btn">➜ BONUS DROPS</a>
+      <a href="#" class="btn">JOIN OUR DISCORD</a>
+    </div>
   </header>
 
-  <!-- Title Section -->
-  <section class="title-section">
-    <h1><span class="highlight">$1000</span>WILDREXER WEEKLY LEADERBOARD</h1>
-    <p>Every <strong>BET</strong> under your code Rexer counts towards your score.<br />
-    <em>The leaderboard updates every day.</em></p>
-    <div class="buttons">
-      <a href="https://bet20ref.com/jd77f989e" class="btn">▶ PLAY NOW</a>
-      <a href="#" class="btn">➜ BONUS DROPS</a>
-      <a href="https://discord.gg/HbVkYq6AJC" class="btn">JOIN OUR DISCORD</a>
-    </div>
-  </section>
+  <main>
+    <section class="top-3" id="top-three"></section>
+    <section class="rankings" id="rankings"></section>
+  </main>
 
-  <!-- Top 3 Section -->
-  <div id="top-three" class="top-three"></div>
-
-  <!-- Rank List Section -->
-  <div id="rank-list" class="rank-list"></div>
-
-  <!-- Footer -->
   <footer class="footer">
-    <p>🚨 <span class="glow-text">LEADERBOARD ENDS IN 20 DAYS</span> 🚨</p>
+    <p id="countdown">LEADERBOARD ENDS IN <span id="days-left">...</span></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
