@@ -1,15 +1,15 @@
 
 const users = [
-  { username: "Marshmello", wagered: 900, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "clone", wagered: 700, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "tejas", wagered: 500, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "shaan", wagered: 400, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "raj", wagered: 300, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "innocent", wagered: 250, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "hemu", wagered: 200, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "prince", wagered: 150, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "teli", wagered: 100, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
-  { username: "baba", wagered: 50, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" }
+  { username: "Marshmello", wagered: 900, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "clone", wagered: 700, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "tejas", wagered: 500, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "shaan", wagered: 400, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "raj", wagered: 300, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "innocent", wagered: 250, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "hemu", wagered: 200, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "prince", wagered: 150, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "teli", wagered: 100, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" },
+  { username: "baba", wagered: 50, logo: "https://ik.imagekit.io/marshmello/baaa-removebg-preview.png?updatedAt=1750351721739" }
 ];
 
 function renderLeaderboard() {
