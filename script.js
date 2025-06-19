@@ -1,15 +1,15 @@
 
 const users = [
-  { username: "Marshmello", wagered: 900, logo: "logo1.png" },
-  { username: "User2", wagered: 700, logo: "logo2.png" },
-  { username: "User3", wagered: 500, logo: "logo3.png" },
-  { username: "User4", wagered: 400, logo: "logo4.png" },
-  { username: "User5", wagered: 300, logo: "logo5.png" },
-  { username: "User6", wagered: 250, logo: "logo6.png" },
-  { username: "User7", wagered: 200, logo: "logo7.png" },
-  { username: "User8", wagered: 150, logo: "logo8.png" },
-  { username: "User9", wagered: 100, logo: "logo9.png" },
-  { username: "User10", wagered: 50, logo: "logo10.png" }
+  { username: "Marshmello", wagered: 900, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "clone", wagered: 700, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "tejas", wagered: 500, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "shaan", wagered: 400, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "raj", wagered: 300, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "innocent", wagered: 250, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "hemu", wagered: 200, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "prince", wagered: 150, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "teli", wagered: 100, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" },
+  { username: "baba", wagered: 50, logo: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327107266" }
 ];
 
 function renderLeaderboard() {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Countdown Timer
 function updateCountdown() {
-  const endDate = new Date("2025-07-09T00:00:00");
+  const endDate = new Date("2025-07-15T00:00:00");
   const now = new Date();
   const diff = endDate - now;
 
