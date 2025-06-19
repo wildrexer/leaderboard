@@ -80,11 +80,11 @@ h1 {
   flex-direction: row;
 }
 .card {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   padding: 20px;
   border-radius: 20px;
-  background-color: #022c36;
+  background-color: #22092c;
   color: #ffff66;
   transition: transform 0.4s, box-shadow 0.4s;
   animation: floatCard 3s ease-in-out infinite, glowNeon 4s ease-in-out infinite;
