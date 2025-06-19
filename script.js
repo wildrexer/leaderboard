@@ -1,54 +1,47 @@
 const users = [
-  { username: "Marshmello", wagered: 900, logo: "logo.png" },
-  { username: "User2", wagered: 500, logo: "logo.png" },
-  { username: "User3", wagered: 150, logo: "logo.png" },
-  { username: "User4", wagered: 75, logo: "logo.png" },
-  { username: "User5", wagered: 25, logo: "logo.png" },
-  { username: "User6", wagered: 0, logo: "logo.png" },
-  { username: "User7", wagered: 0, logo: "logo.png" },
-  { username: "User8", wagered: 0, logo: "logo.png" },
-  { username: "User9", wagered: 0, logo: "logo.png" },
-  { username: "User10", wagered: 0, logo: "logo.png" }
+  { username: "Marshmello", wagered: 900 },
+  { username: "2", wagered: 500 },
+  { username: "3", wagered: 150 },
+  { username: "4", wagered: 75 },
+  { username: "5", wagered: 25 },
+  { username: "6", wagered: 0 },
+  { username: "7", wagered: 0 },
+  { username: "8", wagered: 0 },
+  { username: "9", wagered: 0 },
+  { username: "10", wagered: 0 }
 ];
 
-users.sort((a, b) => b.wagered - a.wagered);
-
-function renderTop3() {
+function renderLeaderboard() {
   const topThreeContainer = document.getElementById("top-three");
-  const topThree = users.slice(0, 3);
+  const rankListContainer = document.getElementById("rank-list");
+  topThreeContainer.innerHTML = "";
+  rankListContainer.innerHTML = "";
 
-  topThree.forEach((user, index) => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `
-      <div class="rank">#${index + 1}</div>
-      <img src="${user.logo}" alt="logo" />
-      <h2>${user.username}</h2>
+  users.slice(0, 3).forEach((user, index) => {
+    const card = document.createElement("div");
+    card.className = "card glow";
+    card.innerHTML = `
+      <div>#${index + 1}</div>
+      <img src="logo.png" alt="Logo" />
+      <div class="username">${user.username}</div>
       <div>Wagered:</div>
       <div class="amount">$${user.wagered}</div>
     `;
-    topThreeContainer.appendChild(div);
+    topThreeContainer.appendChild(card);
   });
-}
 
-function renderOthers() {
-  const othersContainer = document.getElementById("rank-list");
-  const others = users.slice(3, 10);
-
-  others.forEach((user, index) => {
-    const row = document.createElement("div");
-    row.className = "rank-row";
-    row.innerHTML = `
-      <div class="rank">#${index + 4}</div>
-      <div class="username">
-        <img src="${user.logo}" alt="logo" />
-        ${user.username}
+  users.slice(3, 10).forEach((user, index) => {
+    const rankItem = document.createElement("div");
+    rankItem.className = "rank-item";
+    rankItem.innerHTML = `
+      <div class="rank-left">
+        <img src="logo.png" alt="Logo" />
+        <span>#${index + 4} ${user.username}</span>
       </div>
       <div class="amount">$${user.wagered}</div>
     `;
-    othersContainer.appendChild(row);
+    rankListContainer.appendChild(rankItem);
   });
 }
 
-renderTop3();
-renderOthers();
+document.addEventListener("DOMContentLoaded", renderLeaderboard);
