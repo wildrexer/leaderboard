@@ -1,0 +1,145 @@
+body {
+  background: #0a0a23;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.header {
+  padding: 30px;
+}
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 2em;
+}
+.neon {
+  color: #ffdd57;
+  text-shadow: 0 0 8px #ffdd57, 0 0 20px #ffdd57;
+}
+
+.btn-group {
+  margin: 20px 0;
+  display: inline-flex;
+  gap: 15px;
+}
+.btn {
+  padding: 12px 24px;
+  background: #ffdd57;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 221, 87, 0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 221, 87, 1);
+}
+
+/* 🥇🥈🥉 Top 3 card style */
+.top-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  background: #11152a;
+  border: 2px solid #ffdd57;
+  box-shadow: 0 0 25px rgba(255, 221, 87, 0.7);
+  width: 240px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #222;
+}
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+.card .amount {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffdd57;
+  margin-top: 10px;
+}
+.card .rank {
+  color: #ffdd57;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Row style for #4 to #10 */
+.rows-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  gap: 20px;
+}
+.row {
+  width: 90%;
+  max-width: 800px;
+  background: #11152a;
+  border: 1px solid #ffdd57;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  box-shadow: 0 0 15px rgba(255, 221, 87, 0.3);
+}
+.rank {
+  font-weight: bold;
+  color: #ffdd57;
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.name img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffdd57;
+}
+.amount {
+  font-weight: bold;
+  color: #ffdd57;
+}
+
+/* Footer */
+footer {
+  background: #11102a;
+  padding: 20px;
+}
+.countdown-timer {
+  font-size: 1.5em;
+  color: #ffdd57;
+  text-shadow: 0 0 8px #ffdd57;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .top-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .row {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
