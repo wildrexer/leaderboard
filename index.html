@@ -5,24 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1><span class="gold">$1000</span> WEEKLY LEADERBOARD!</h1>
-    <p>Every <strong>BET</strong> on BETY under Code <strong>WILDREXER</strong> counts towards your score.<br><em>The leaderboard updates every day.</em></p>
-    <div class="buttons">
-      <a href="#">▶ PLAY NOW</a>
-      <a href="#">➜ BONUS DROPS</a>
-      <a href="#">JOIN OUR DISCORD</a>
-    </div>
+  <!-- Header with logo -->
+  <header class="site-header">
+    <img src="logo.png" alt="Site Logo" class="site-logo" />
+    <span class="site-title">Leaderboard</span>
   </header>
 
-  <section class="top3" id="top-three"></section>
-  <section class="others" id="rank-list"></section>
-  <footer>
-    <div class="countdown-label">LEADERBOARD END IN</div>
-    <div class="countdown-timer">20 DAYS</div>
+  <!-- Title Section -->
+  <section class="title-section">
+    <h1><span class="highlight">$1000</span> WEEKLY LEADERBOARD</h1>
+    <p>Every <strong>BET</strong> under your code counts towards your score.<br />
+    <em>The leaderboard updates every day.</em></p>
+    <div class="buttons">
+      <a href="#" class="btn">▶ PLAY NOW</a>
+      <a href="#" class="btn">➜ BONUS DROPS</a>
+      <a href="#" class="btn">JOIN OUR DISCORD</a>
+    </div>
+  </section>
+
+  <!-- Top 3 Section -->
+  <div id="top-three" class="top-three"></div>
+
+  <!-- Rank List Section -->
+  <div id="rank-list" class="rank-list"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>🚨 <span class="glow-text">LEADERBOARD ENDS IN 20 DAYS</span> 🚨</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
